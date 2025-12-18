@@ -279,7 +279,98 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="booking" className="py-20 px-4 bg-white">
+      <section id="availability" className="py-20 px-4 bg-gradient-to-br from-primary/10 via-secondary/10 to-muted/10">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="border-none shadow-xl bg-white">
+              <CardContent className="p-8 text-center space-y-4">
+                <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mx-auto">
+                  <Icon name="Users" className="w-10 h-10 text-primary" />
+                </div>
+                <div>
+                  <p className="text-5xl font-bold text-primary mb-2">12</p>
+                  <p className="text-muted-foreground">мест осталось на<br />групповой тренинг</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-none shadow-xl bg-white">
+              <CardContent className="p-8 text-center space-y-4">
+                <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mx-auto">
+                  <Icon name="Calendar" className="w-10 h-10 text-primary" />
+                </div>
+                <div>
+                  <p className="text-5xl font-bold text-primary mb-2">25</p>
+                  <p className="text-muted-foreground">января 2025<br />старт ближайшей группы</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-none shadow-xl bg-white">
+              <CardContent className="p-8 text-center space-y-4">
+                <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mx-auto">
+                  <Icon name="Clock" className="w-10 h-10 text-primary" />
+                </div>
+                <div>
+                  <p className="text-5xl font-bold text-primary mb-2">16</p>
+                  <p className="text-muted-foreground">часов глубокой работы<br />над отношениями</p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" className="py-20 px-4 bg-white">
+        <div className="container mx-auto max-w-4xl">
+          <h3 className="text-4xl font-bold text-center mb-6 text-foreground">Частые вопросы</h3>
+          <p className="text-center text-muted-foreground mb-12 text-lg">Ответы на самые популярные вопросы о тренинге</p>
+          
+          <Accordion type="single" collapsible className="space-y-4">
+            {[
+              {
+                question: 'Можно ли прийти на тренинг одному, без партнёра?',
+                answer: 'Да, конечно! Многие участники приходят без партнёра. Вы узнаете о себе, своих паттернах в отношениях и получите инструменты для построения гармоничных отношений в будущем. Это отличная возможность подготовиться к новым отношениям или понять, что происходит в текущих.'
+              },
+              {
+                question: 'Какой формат проведения тренинга?',
+                answer: 'Тренинг проходит в интерактивном формате: теория, практические упражнения в парах и группах, разбор реальных ситуаций, медитации и техники релаксации. Есть формат онлайн и офлайн в комфортном пространстве в центре Москвы.'
+              },
+              {
+                question: 'Сколько длится программа?',
+                answer: 'Полная программа состоит из 8 модулей общей продолжительностью 16 часов. Занятия проходят по выходным: 4 встречи по 4 часа или 2 интенсива по 8 часов — на ваш выбор. Между встречами даю домашние задания для закрепления материала.'
+              },
+              {
+                question: 'Что делать, если мы в кризисе и почти расстались?',
+                answer: 'Тренинг помогает даже в сложных ситуациях, но если кризис острый, рекомендую начать с индивидуальной парной консультации. Я помогу стабилизировать ситуацию, а потом вы сможете присоединиться к групповому тренингу для углублённой работы.'
+              },
+              {
+                question: 'Гарантируете ли вы результат?',
+                answer: 'Результат зависит от вашей готовности работать над отношениями и применять полученные инструменты. Я гарантирую качественную программу, профессиональную поддержку и проверенные техники. 95% пар отмечают значительные улучшения после прохождения программы.'
+              },
+              {
+                question: 'Конфиденциальна ли информация, которой мы делимся?',
+                answer: 'Абсолютно! Всё, что обсуждается на тренинге, остаётся в группе. Мы подписываем соглашение о конфиденциальности. Ваша безопасность и приватность — мой главный приоритет.'
+              },
+              {
+                question: 'Какая стоимость участия?',
+                answer: 'Групповой тренинг — 25 000 рублей за полную программу. Индивидуальная консультация — 8 000 рублей/час. Парная сессия — 12 000 рублей/час. Есть система скидок при оплате сразу нескольких встреч. Возможна рассрочка.'
+              }
+            ].map((faq, index) => (
+              <AccordionItem key={index} value={`faq-${index}`} className="bg-gradient-to-br from-white to-secondary/5 rounded-2xl shadow-md border-none px-6">
+                <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-primary py-6 text-left">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </section>
+
+      <section id="booking" className="py-20 px-4 bg-gradient-to-br from-muted/20 to-secondary/10">
         <div className="container mx-auto max-w-3xl">
           <h3 className="text-4xl font-bold text-center mb-6 text-foreground">Запись на тренинг</h3>
           <p className="text-center text-muted-foreground mb-12 text-lg">Заполните форму, и я свяжусь с вами для уточнения деталей</p>
