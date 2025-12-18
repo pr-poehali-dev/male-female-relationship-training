@@ -321,7 +321,121 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="faq" className="py-20 px-4 bg-white">
+      <section id="pricing" className="py-20 px-4 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <h3 className="text-4xl font-bold text-center mb-6 text-foreground">Стоимость участия</h3>
+          <p className="text-center text-muted-foreground mb-12 text-lg">Выберите удобный для вас формат работы</p>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="border-2 border-border hover:border-primary/50 transition-all hover:shadow-2xl">
+              <CardContent className="p-8 space-y-6">
+                <div className="text-center">
+                  <div className="w-16 h-16 rounded-full bg-muted/30 flex items-center justify-center mx-auto mb-4">
+                    <Icon name="User" className="w-8 h-8 text-foreground" />
+                  </div>
+                  <h4 className="text-2xl font-bold text-foreground mb-2">Индивидуальная консультация</h4>
+                  <p className="text-muted-foreground mb-6">Работа с личными запросами</p>
+                </div>
+                <div className="text-center border-t border-b border-border py-6">
+                  <p className="text-5xl font-bold text-foreground mb-2">8 000 ₽</p>
+                  <p className="text-muted-foreground">за 1 час</p>
+                </div>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">Персональный подход</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">Гибкий график</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">Онлайн или офлайн</span>
+                  </li>
+                </ul>
+                <Button onClick={() => scrollToSection('booking')} className="w-full" variant="outline">Записаться</Button>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-primary shadow-2xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 bg-primary text-foreground px-6 py-2 text-sm font-semibold rounded-bl-2xl">
+                Популярный
+              </div>
+              <CardContent className="p-8 space-y-6">
+                <div className="text-center">
+                  <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
+                    <Icon name="Users" className="w-8 h-8 text-primary" />
+                  </div>
+                  <h4 className="text-2xl font-bold text-foreground mb-2">Групповой тренинг</h4>
+                  <p className="text-muted-foreground mb-6">Полная программа 8 модулей</p>
+                </div>
+                <div className="text-center border-t border-b border-border py-6">
+                  <p className="text-5xl font-bold text-primary mb-2">25 000 ₽</p>
+                  <p className="text-muted-foreground">за всю программу</p>
+                </div>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">16 часов практики</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">Группа до 10 человек</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">Материалы и задания</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">Поддержка в чате</span>
+                  </li>
+                </ul>
+                <Button onClick={() => scrollToSection('booking')} className="w-full bg-primary hover:bg-primary/90 text-foreground">Записаться</Button>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-border hover:border-primary/50 transition-all hover:shadow-2xl">
+              <CardContent className="p-8 space-y-6">
+                <div className="text-center">
+                  <div className="w-16 h-16 rounded-full bg-accent/30 flex items-center justify-center mx-auto mb-4">
+                    <Icon name="Heart" className="w-8 h-8 text-foreground" />
+                  </div>
+                  <h4 className="text-2xl font-bold text-foreground mb-2">Парная сессия</h4>
+                  <p className="text-muted-foreground mb-6">Работа с отношениями пары</p>
+                </div>
+                <div className="text-center border-t border-b border-border py-6">
+                  <p className="text-5xl font-bold text-foreground mb-2">12 000 ₽</p>
+                  <p className="text-muted-foreground">за 1 час</p>
+                </div>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">Работа в паре</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">Решение конфликтов</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">Практические техники</span>
+                  </li>
+                </ul>
+                <Button onClick={() => scrollToSection('booking')} className="w-full" variant="outline">Записаться</Button>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-muted-foreground mb-4">💳 Возможна оплата картой или рассрочка на 3 месяца</p>
+            <p className="text-muted-foreground">🎁 Скидка 15% при оплате полного курса за один раз</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" className="py-20 px-4 bg-gradient-to-br from-muted/20 to-secondary/10">
         <div className="container mx-auto max-w-4xl">
           <h3 className="text-4xl font-bold text-center mb-6 text-foreground">Частые вопросы</h3>
           <p className="text-center text-muted-foreground mb-12 text-lg">Ответы на самые популярные вопросы о тренинге</p>
@@ -488,7 +602,42 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contacts" className="py-20 px-4 bg-gradient-to-br from-secondary/30 via-background to-muted/20">
+      <section id="whatsapp" className="py-20 px-4 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20">
+        <div className="container mx-auto max-w-4xl">
+          <Card className="border-none shadow-2xl bg-white/95 backdrop-blur">
+            <CardContent className="p-12 text-center space-y-6">
+              <div className="w-20 h-20 rounded-full bg-green-500/20 flex items-center justify-center mx-auto">
+                <Icon name="MessageCircle" className="w-10 h-10 text-green-600" />
+              </div>
+              <h3 className="text-3xl font-bold text-foreground">Остались вопросы?</h3>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Напишите мне в WhatsApp, и я отвечу на все ваши вопросы о тренинге, формате работы и помогу выбрать подходящий вариант
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+                <a 
+                  href="https://wa.me/79991234567?text=Здравствуйте! Хочу узнать подробнее о тренинге по отношениям" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block"
+                >
+                  <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white text-lg px-8">
+                    <Icon name="MessageCircle" className="mr-2 h-5 w-5" />
+                    Написать в WhatsApp
+                  </Button>
+                </a>
+                <Button onClick={() => scrollToSection('booking')} size="lg" variant="outline" className="text-lg px-8">
+                  Заполнить форму
+                </Button>
+              </div>
+              <p className="text-sm text-muted-foreground pt-4">
+                ⚡ Обычно отвечаю в течение 1 часа
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section id="contacts" className="py-20 px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
           <h3 className="text-4xl font-bold text-center mb-6 text-foreground">Контакты</h3>
           <p className="text-center text-muted-foreground mb-12 text-lg">Свяжитесь со мной удобным способом</p>
